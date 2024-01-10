@@ -20,6 +20,10 @@ module.exports = {
       animation: {
         rotate: "rotate-center .6s ease-in-out both",
       },
+      boxShadow: {
+        "glow-accent-1": "0px 0px 84px 0px rgba(53, 129, 184, 0.9)",
+        "glow-accent-2": "0px 0px 84px 0px rgba(223, 41, 53, 0.9)",
+      },
     },
   },
   plugins: [],

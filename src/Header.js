@@ -28,7 +28,7 @@ export default function Header() {
   const navMenu = navbar.map((item) => (
     <h2
       key={item.id}
-      className="mx-4 text-xl font-bold cursor-pointer hover:underline text-content hover:decoration-2"
+      className="mx-4 text-xl font-bold cursor-pointer hover:underline decoration-supporter text-content hover:decoration-2"
     >
       {item.name}
     </h2>
