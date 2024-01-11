@@ -4,7 +4,7 @@ import doctorsData from "./doctorsData";
 
 export default function Doctors() {
   const [selectedDepartment, setSelectedDepartment] = useState(null);
-
+  //departments list
   const departments = [
     {
       name: "Surgery",
@@ -23,7 +23,7 @@ export default function Doctors() {
       id: nanoid(),
     },
   ];
-
+  //doctors filter
   const getDoctorsByDeppartment = (departmentName) =>
     doctorsData.reduce((acc, doctor) => {
       if (doctor.deppartment === departmentName) {
@@ -31,19 +31,24 @@ export default function Doctors() {
       }
       return acc;
     }, []);
+  //click function for buttons
   const handleClick = (departmentName) => {
     setSelectedDepartment(departmentName);
     return departmentName;
   };
+  //doctors card output
   const doctorsCard = getDoctorsByDeppartment(selectedDepartment).map(
     (item) => (
-      <div key={item.id} className="p-2 border-2 w-28">
-        <img src={item.img} alt="doctor" className="w-24"></img>
-        <p className="text-wrap">{item.name}</p>
+      <div
+        key={item.id}
+        className="flex flex-col items-center p-2 transition-all duration-300 border-2 rounded w-52 shadow-glow-accent-1 hover:shadow-glow-accent-2"
+      >
+        <img src={item.img} alt="doctor" className="w-36"></img>
+        <p className="my-1 font-bold text-wrap">{item.name}</p>
       </div>
     )
   );
-
+  //buttons output
   const buttons = departments.map((item) => (
     <button
       key={item.id}
@@ -55,7 +60,7 @@ export default function Doctors() {
   ));
 
   return (
-    <section className="flex flex-col font-content">
+    <section className="flex flex-col text-content">
       <div className="mx-6 text-content">
         <h2 className="text-6xl tracking-tighter text-center">Doctors</h2>
         <p className="text-base text-start">Please choose department</p>

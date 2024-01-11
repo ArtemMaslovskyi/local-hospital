@@ -13,10 +13,6 @@ export default function Header() {
       id: nanoid(),
     },
     {
-      name: "Appointment",
-      id: nanoid(),
-    },
-    {
       name: "Contact",
       id: nanoid(),
     },
