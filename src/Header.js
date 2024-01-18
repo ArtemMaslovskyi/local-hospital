@@ -1,6 +1,8 @@
 import React from "react";
 import { BiHealth } from "react-icons/bi";
 import { nanoid } from "nanoid";
+import { FaSun } from "react-icons/fa6";
+import { FaMoon } from "react-icons/fa";
 
 export default function Header() {
   const navbar = [
@@ -29,6 +31,26 @@ export default function Header() {
       {item.name}
     </h2>
   ));
+  // dark mode button function
+  const [darkMode, setDarkMode] = React.useState(
+    localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+  );
+
+  React.useEffect(() => {
+    if (darkMode) {
+      document.documentElement.classList.add("dark");
+      localStorage.theme = "dark";
+    } else {
+      document.documentElement.classList.remove("dark");
+      localStorage.theme = "light";
+    }
+  }, [darkMode]);
+
+  const toggleTheme = () => {
+    setDarkMode((prevIsDarkMode) => !prevIsDarkMode);
+  };
   return (
     <header className="flex items-center justify-between">
       <BiHealth
@@ -40,6 +62,14 @@ export default function Header() {
         Hadiach Hospital
       </h1>
       <div className="flex flex-wrap">{navMenu}</div>
+      <button onClick={toggleTheme}>
+        {" "}
+        {darkMode ? (
+          <FaSun size={32} color="white" />
+        ) : (
+          <FaMoon size={32} color="373737" />
+        )}
+      </button>
     </header>
   );
 }
