@@ -41,9 +41,9 @@ export default function Doctors() {
     (item) => (
       <div
         key={item.id}
-        className="flex flex-col items-center p-2 transition-all duration-300 border-2 rounded w-52 shadow-glow-accent-1 hover:shadow-glow-accent-2"
+        className="flex flex-col items-center w-40 h-auto p-2 transition-all duration-300 border-2 rounded md:w-52 shadow-glow-accent-1 hover:shadow-glow-accent-2"
       >
-        <img src={item.img} alt="doctor" className="w-36"></img>
+        <img src={item.img} alt="doctor" className="w-14 md:w-32"></img>
         <p className="my-1 font-bold text-wrap">{item.name}</p>
       </div>
     )
@@ -66,7 +66,7 @@ export default function Doctors() {
         <p className="text-base text-start">Please choose department</p>
         <div className="flex flex-row m-4 justify-evenly">{buttons}</div>
       </div>
-      <div className="grid grid-cols-4 gap-4 mt-8 text-sm place-items-center">
+      <div className="grid grid-cols-2 gap-6 mt-8 text-sm place-items-center md:grid-cols-4 md:gap-4">
         {doctorsCard}
       </div>
     </section>

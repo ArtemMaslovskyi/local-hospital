@@ -3,6 +3,7 @@ import Header from "./Header";
 import Hospital from "./hospital";
 import Doctors from "./doctors";
 import Contact from "./Contact";
+import Veterans from "./Veterans";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Hospital></Hospital>
       <Doctors></Doctors>
       <Contact></Contact>
+      <Veterans></Veterans>
     </div>
   );
 }

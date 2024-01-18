@@ -8,6 +8,7 @@ module.exports = {
     "./src/doctors.js",
     "./src/DoctorCards.js",
     "./src/Contact.js",
+    "./src/Veterans.js",
   ],
   theme: {
     extend: {
