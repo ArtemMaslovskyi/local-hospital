@@ -4,7 +4,9 @@ export default function Contact() {
   return (
     <section className="flex flex-col text-content">
       <div className="mx-6 my-6 text-content">
-        <h2 className="text-6xl tracking-tighter text-center">Contact</h2>
+        <h2 className="text-6xl tracking-tighter text-center dark:text-anti-flash">
+          Contact
+        </h2>
       </div>
       <div className="flex flex-col gap-2 m-6 md:flex-row">
         <iframe
@@ -17,7 +19,7 @@ export default function Contact() {
           title="map"
           className="w-auto border-2 rounded-md md:w-1/2"
         ></iframe>
-        <div className="grid h-6 grid-cols-2">
+        <div className="grid h-6 grid-cols-2 dark:text-anti-flash">
           <p className="row-span-2">Telephone:</p>
           <p className="row-span-1 cursor-pointer text-supporter lining-nums">
             +380990999999

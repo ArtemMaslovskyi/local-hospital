@@ -3,9 +3,9 @@ import React from "react";
 export default function Hospital() {
   return (
     <section className="flex">
-      <div className="w-auto mx-6 md:w-1/2 text-content">
+      <div className="w-auto mx-6 md:w-1/2 text-content dark:text-anti-flash">
         <h2 className="text-6xl tracking-tighter">Local Hospital</h2>
-        <p className="my-4 text-base leading-5 text-start">
+        <p className="my-4 text-base leading-5 text-start dark:text-anti-flash">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus, ullam
           nemo? Laudantium omnis eum voluptate aliquam harum cumque repudiandae
           animi! Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus,

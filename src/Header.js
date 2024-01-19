@@ -26,12 +26,11 @@ export default function Header() {
   const navMenu = navbar.map((item) => (
     <h2
       key={item.id}
-      className="mx-4 text-xl font-bold cursor-pointer hover:underline decoration-supporter text-content hover:decoration-2 "
+      className="mx-4 text-xl font-bold cursor-pointer hover:underline decoration-supporter text-content hover:decoration-2 dark:text-anti-flash"
     >
       {item.name}
     </h2>
   ));
-  // dark mode button function
   const [darkMode, setDarkMode] = React.useState(
     localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -51,14 +50,15 @@ export default function Header() {
   const toggleTheme = () => {
     setDarkMode((prevIsDarkMode) => !prevIsDarkMode);
   };
+  //TODO: dark mode style
   return (
     <header className="flex items-center justify-between">
       <BiHealth
         size={"80px"}
         color="373737"
-        className="w-12 m-4 cursor-pointer hover:animate-rotate lg:w-20 md:w-14 sm:w-0"
+        className="w-12 m-4 cursor-pointer hover:animate-rotate lg:w-20 md:w-14 sm:w-0 dark:fill-anti-flash"
       />
-      <h1 className="mx-4 text-2xl font-extrabold cursor-pointer text-content">
+      <h1 className="mx-4 text-2xl font-extrabold cursor-pointer text-content dark:text-anti-flash">
         Hadiach Hospital
       </h1>
       <div className="flex flex-wrap">{navMenu}</div>

@@ -41,7 +41,7 @@ export default function Doctors() {
     (item) => (
       <div
         key={item.id}
-        className="flex flex-col items-center w-40 h-auto p-2 transition-all duration-300 border-2 rounded md:w-52 shadow-glow-accent-1 hover:shadow-glow-accent-2"
+        className="flex flex-col items-center w-40 h-auto p-2 transition-all duration-300 border-2 rounded dark:text-anti-flash md:w-52 dark:shadow-glow-accent-1-dark shadow-glow-accent-1 hover:dark:shadow-glow-accent-2-dark hover:shadow-glow-accent-2"
       >
         <img src={item.img} alt="doctor" className="w-14 md:w-32"></img>
         <p className="my-1 font-bold text-wrap">{item.name}</p>
@@ -52,7 +52,7 @@ export default function Doctors() {
   const buttons = departments.map((item) => (
     <button
       key={item.id}
-      className="p-1 m-1 font-bold transition-all duration-200 ease-in border-2 rounded shadow-glow-accent-1 hover:shadow-glow-accent-2"
+      className="p-1 m-1 font-bold transition-all duration-200 ease-in border-2 rounded dark:text-anti-flash shadow-glow-accent-1 dark:shadow-glow-accent-1-dark hover:dark:shadow-glow-accent-2-dark hover:shadow-glow-accent-2"
       onClick={() => handleClick(item.name)}
     >
       {item.name}
@@ -61,7 +61,7 @@ export default function Doctors() {
 
   return (
     <section className="flex flex-col text-content">
-      <div className="mx-6 text-content">
+      <div className="mx-6 text-content dark:text-anti-flash">
         <h2 className="text-6xl tracking-tighter text-center">Doctors</h2>
         <p className="text-base text-start">Please choose department</p>
         <div className="flex flex-row m-4 justify-evenly">{buttons}</div>

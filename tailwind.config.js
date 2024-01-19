@@ -15,6 +15,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
+        "anti-flash": "#EDEDED",
+        dark: {
+          main: "rgb(  var(--color-dark) / <alpha-value>)",
+          main2: "rgb(  var(--color-dark) / <alpha-value>)",
+        },
         accent: {
           1: "rgb(  var(--color-accent1) / <alpha-value>)",
           2: "rgb(var(--color-accent2) / <alpha-value>)",
@@ -27,7 +32,9 @@ module.exports = {
       },
       boxShadow: {
         "glow-accent-1": "0px 0px 84px 0px rgba(53, 129, 184, 0.9)",
+        "glow-accent-1-dark": "0px 0px 30px 0px rgba(53, 129, 184, 0.9)",
         "glow-accent-2": "0px 0px 84px 0px rgba(223, 41, 53, 0.9)",
+        "glow-accent-2-dark": "0px 0px 30px 0px rgba(223, 41, 53, 0.9)",
       },
     },
   },

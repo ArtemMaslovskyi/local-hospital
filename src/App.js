@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="transition-colors duration-300 App dark:bg-black">
+    <div className="transition-colors duration-500 App dark:bg-dark-main">
       <Header></Header>
       <Hospital></Hospital>
       <Doctors></Doctors>

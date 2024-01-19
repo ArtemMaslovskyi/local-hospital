@@ -3,7 +3,9 @@ import React from "react";
 export default function Veterans() {
   return (
     <section className="text-content">
-      <h2 className="text-6xl tracking-tighter text-center">Veterans</h2>
+      <h2 className="text-6xl tracking-tighter text-center dark:text-anti-flash">
+        Veterans
+      </h2>
       {/* bento */}
       <div className="flex justify-center text-wrap">
         <div className="grid grid-cols-6 grid-rows-6 *:bg-neutral-100 *:rounded-2xl gap-2 m-6 w-[1000px] h-[1000px] place-content-center">
